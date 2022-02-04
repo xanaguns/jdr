@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:fillViewport="true"
+        android:padding="30dp"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="파이어베이스 CRUD"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/bemin_uljiro"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="할 일추가"
+            app:endIconMode="clear_text"
+            app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent"
+            app:counterEnabled="true"
+            app:counterMaxLength="16"
+            android:layout_marginBottom="30dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeColor="@color/colorPrimary"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/todo_content_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bemin_uljiro"
+                android:maxLength="16"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/todo_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호"
+            app:endIconMode="clear_text"
+            app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:counterEnabled="true"
+            app:counterMaxLength="10"
+            android:layout_marginBottom="30dp"
+            app:boxStrokeColor="@color/colorPrimary"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/user_password_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLength="10"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/move_to_register_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="잠깐! 이미 계정이 없으신가요? - 회원가입"
+            android:textSize="15sp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/create_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="삽입"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:fontFamily="@font/bemin_uljiro"
+            />
+        <Button
+            android:id="@+id/read_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="조회"
+            android:fontFamily="@font/bemin_uljiro"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            />
+        <Button
+            android:id="@+id/update_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="수정"
+            android:fontFamily="@font/bemin_uljiro"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            />
+        <Button
+            android:id="@+id/delete_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="제거"
+            android:fontFamily="@font/bemin_uljiro"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>
