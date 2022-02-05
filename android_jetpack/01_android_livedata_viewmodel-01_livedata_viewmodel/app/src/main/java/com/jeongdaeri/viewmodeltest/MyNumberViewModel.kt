@@ -1,4 +1,4 @@
-fpackage com.jeongdaeri.viewmodeltest
+package com.jeongdaeri.viewmodeltest
 
 import android.util.Log
 import android.widget.Switch
