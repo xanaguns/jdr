@@ -30,11 +30,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         myNumberViewModel = ViewModelProvider(this).get(MyNumberViewModel::class.java)
 
         // 뷰모델이 가지고 있는 값의 변경사항을 관찰할 수 있는 라이브 데이터를 옵저빙한다
+        /*
         myNumberViewModel.currentValue.observe(this, Observer {
             Log.d(TAG, "MainActivity - myNumberViewModel - currentValue 라이브 데이터 값 변경 : $it")
 
             number_textview.text = it.toString()
         })
+        */
+        myNumberViewModel.observe(this) {
+            Log.d(TAG, "MainActivity - myNumberViewModel - currentValue 라이브 데이터 값 변경 : $it")
+
+            number_textview.text = it.toString()
+        }
 
         // 리스너 연결
         plus_btn.setOnClickListener(this)
